@@ -1,0 +1,40 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\begin{document}
+\begin{tikzpicture}[scale=1.5]
+
+\draw[fill=black,dotted]
+(2,0) circle(2pt) node[below right] {$U_1$} --
+(2,2) circle(2pt) node[right] {$U_{13}$} --
+(0,2) circle(2pt) node[above left] {$U_3$} --
+(0,0) circle(2pt) node[below left] {$U$} -- (2,0);
+
+\begin{scope}[xshift=6mm,yshift=8mm]
+\draw[fill=black,dotted]
+(2,0) circle(2pt) node[below right] {$U_{12}$} --
+(2,2) circle(2pt) node[above right] {$U_{123}$} --
+(0,2) circle(2pt) node[above left] {$U_{23}$} --
+(0,0) circle(2pt) node[left] {$U_2$} -- (2,0);
+\end{scope}
+
+\draw[dotted] (0,0) -- (.6,.8);
+\draw[dotted] (2,0) -- (2.6,.8);
+\draw[dotted] (0,2) -- (.6,2.8);
+\draw[dotted] (2,2) -- (2.6,2.8);
+
+
+\draw (0,0) circle(2pt)[fill=white];
+\draw (2.6,2.8) circle(2pt)[fill=white];
+
+\draw[thick]
+(2,0) -- (2.6,.8) -- (2,2) -- (2,0) -- (.6,.8)  -- (0,2) -- (2,2) -- (.6,2.8) -- (0,2) -- cycle;
+
+\draw[thick,dashed]
+(.6,.8)  -- (.6,2.8) -- (2.6,.8) -- cycle;
+
+%\node[below] at (1,0) {$\alpha_1$} ;
+%\node[right] at (.3,.4) {$\alpha_2$} ;
+%\node[left] at (0,1) {$\alpha_3$} ;
+\end{tikzpicture}
+\end{document}

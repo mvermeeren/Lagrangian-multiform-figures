@@ -1,0 +1,11 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\begin{document}
+\begin{tikzpicture}[scale=(.45)]
+\draw[thick,gray] (0,1) .. controls (2,2.5) and (2.5,5) .. (6,4);
+\node[gray] at (4.7,4.7) {$\Gamma$};
+\draw[thick] (0,1) -- (0,2) -- (2,2) -- (2,4) -- (6,4);
+\node at (2.5,1.5) {$S$};
+\end{tikzpicture}%
+\end{document}
